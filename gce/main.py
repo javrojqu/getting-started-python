@@ -23,3 +23,7 @@ def say_hello():
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
+@app.route('/healthcheck', methods=['GET'])
+def perform_healthcheck():
+    # Perform health check verification work here. 
+    return "Health check passed."
